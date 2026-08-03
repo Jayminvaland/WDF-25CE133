@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            background-image: url("background image.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        center {
+            padding: 30px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        hr {
+            width: 80%;
+            border: 1px solid white;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        table {
+            color: white;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 250px;
+            padding: 8px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #084298;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<center>
+
+    <h1>STUDENT PORTAL</h1>
+
+    <hr>
+
+    <a href="index.html">Home</a> |
+    <a href="login.html">Login</a> |
+    <a href="registration.html">Registration</a> |
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="profile.html">Profile</a> |
+    <a href="attendance.html">Attendance</a> |
+    <a href="result.html">Result</a> |
+    <a href="timetable.html">Timetable</a> |
+    <a href="fees.html">Fees</a> |
+    <a href="contact.html">Contact</a>
+
+    <hr>
+
+    <h2>Student Registration Form</h2>
+
+    <form>
+
+        <table cellpadding="8">
+
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="fullname"></td>
+            </tr>
+
+            <tr>
+                <td>Enrollment Number</td>
+                <td><input type="text" name="enrollment"></td>
+            </tr>
+
+            <tr>
+                <td>Email Address</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="text" name="dob" placeholder="DD / MM / YYYY"></td>
+            </tr>
+
+            <tr>
+                <td>Department</td>
+                <td>
+                    <select name="department">
+                        <option>Computer Engineering</option>
+                        <option>Information Technology</option>
+                        <option>Mechanical Engineering</option>
+                        <option>Civil Engineering</option>
+                        <option>Electrical Engineering</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Semester</td>
+                <td>
+                    <select name="semester">
+                        <option>Semester 1</option>
+                        <option>Semester 2</option>
+                        <option>Semester 3</option>
+                        <option>Semester 4</option>
+                        <option>Semester 5</option>
+                        <option>Semester 6</option>
+                        <option>Semester 7</option>
+                        <option>Semester 8</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="text" name="mobile"></td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td>
+                    <textarea rows="4" cols="25"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</center>
+
+</body>
+
+</html>
