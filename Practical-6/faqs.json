@@ -1,0 +1,93 @@
+
+[
+  {
+    "id": 1,
+    "question": "What is StudentHub?",
+    "answer": "StudentHub is a student portal that provides access to academic information and student services.",
+    "category": "General"
+  },
+  {
+    "id": 2,
+    "question": "How can I view my courses?",
+    "answer": "Open the Courses page to explore available courses and programmes.",
+    "category": "Courses"
+  },
+  {
+    "id": 3,
+    "question": "Where can I check my attendance?",
+    "answer": "Open the Attendance page from the navigation menu to view attendance information.",
+    "category": "Attendance"
+  },
+  {
+    "id": 4,
+    "question": "How can I view my examination results?",
+    "answer": "Visit the Result page to check the available examination information.",
+    "category": "Results"
+  },
+  {
+    "id": 5,
+    "question": "Where can I find my timetable?",
+    "answer": "Open the Timetable page to view your class schedule.",
+    "category": "Timetable"
+  },
+  {
+    "id": 6,
+    "question": "How can I check my fee details?",
+    "answer": "Visit the Fees page for fee-related information.",
+    "category": "Fees"
+  },
+  {
+    "id": 7,
+    "question": "How do I register as a student?",
+    "answer": "Open the Registration page and complete the required form fields.",
+    "category": "Registration"
+  },
+  {
+    "id": 8,
+    "question": "What should I do if I forget my password?",
+    "answer": "Use the password recovery facility if it is available, or contact the authorized portal administrator.",
+    "category": "Account"
+  },
+  {
+    "id": 9,
+    "question": "Where can I find scholarship information?",
+    "answer": "Visit the Scholarship page to explore scholarship-related information.",
+    "category": "Scholarship"
+  },
+  {
+    "id": 10,
+    "question": "How can I contact the college?",
+    "answer": "Open the Contact page to find the available contact information.",
+    "category": "Contact"
+  },
+  {
+    "id": 11,
+    "question": "What is a JSON file?",
+    "answer": "JSON is a text-based data format commonly used to store and exchange structured data.",
+    "category": "Web Development"
+  },
+  {
+    "id": 12,
+    "question": "What is the Fetch API?",
+    "answer": "The Fetch API allows JavaScript to make requests and retrieve resources such as JSON data.",
+    "category": "Web Development"
+  },
+  {
+    "id": 13,
+    "question": "Why is search functionality useful?",
+    "answer": "Search allows users to find specific records without manually checking every item.",
+    "category": "Web Development"
+  },
+  {
+    "id": 14,
+    "question": "What is pagination?",
+    "answer": "Pagination divides a large collection of records into smaller pages.",
+    "category": "Web Development"
+  },
+  {
+    "id": 15,
+    "question": "How can I report a portal issue?",
+    "answer": "Use the available Contact facility to report an issue to the portal administrator.",
+    "category": "Support"
+  }
+]

@@ -1,0 +1,123 @@
+
+[
+  {
+    "id": 1,
+    "title": "Web Development Workshop",
+    "category": "Workshop",
+    "date": "2026-11-05",
+    "venue": "Computer Laboratory",
+    "description": "Learn the basics of HTML, CSS and JavaScript."
+  },
+  {
+    "id": 2,
+    "title": "Coding Competition",
+    "category": "Technical",
+    "date": "2026-11-08",
+    "venue": "Programming Lab",
+    "description": "Solve programming problems and demonstrate coding skills."
+  },
+  {
+    "id": 3,
+    "title": "Technical Seminar",
+    "category": "Seminar",
+    "date": "2026-11-12",
+    "venue": "Seminar Hall",
+    "description": "Explore new technologies and software development trends."
+  },
+  {
+    "id": 4,
+    "title": "Project Exhibition",
+    "category": "Technical",
+    "date": "2026-11-16",
+    "venue": "College Auditorium",
+    "description": "Present student projects and innovative technical ideas."
+  },
+  {
+    "id": 5,
+    "title": "Cultural Festival",
+    "category": "Cultural",
+    "date": "2026-11-20",
+    "venue": "College Ground",
+    "description": "Participate in cultural performances and creative activities."
+  },
+  {
+    "id": 6,
+    "title": "Cyber Security Awareness",
+    "category": "Seminar",
+    "date": "2026-11-24",
+    "venue": "Seminar Hall",
+    "description": "Understand safe browsing and basic cyber security practices."
+  },
+  {
+    "id": 7,
+    "title": "UI Design Workshop",
+    "category": "Workshop",
+    "date": "2026-11-28",
+    "venue": "Design Laboratory",
+    "description": "Learn interface design, layout principles and usability."
+  },
+  {
+    "id": 8,
+    "title": "Sports Day",
+    "category": "Sports",
+    "date": "2026-12-02",
+    "venue": "College Ground",
+    "description": "Take part in outdoor games and team sports."
+  },
+  {
+    "id": 9,
+    "title": "Innovation Challenge",
+    "category": "Technical",
+    "date": "2026-12-06",
+    "venue": "Innovation Centre",
+    "description": "Develop creative solutions for real-world problems."
+  },
+  {
+    "id": 10,
+    "title": "Career Guidance Session",
+    "category": "Seminar",
+    "date": "2026-12-10",
+    "venue": "Seminar Hall",
+    "description": "Explore career paths and professional development skills."
+  },
+  {
+    "id": 11,
+    "title": "Photography Competition",
+    "category": "Cultural",
+    "date": "2026-12-14",
+    "venue": "College Campus",
+    "description": "Showcase creativity through photography."
+  },
+  {
+    "id": 12,
+    "title": "Database Management Workshop",
+    "category": "Workshop",
+    "date": "2026-12-18",
+    "venue": "Computer Laboratory",
+    "description": "Understand database design, SQL and data management."
+  },
+  {
+    "id": 13,
+    "title": "Project Presentation",
+    "category": "Technical",
+    "date": "2026-12-22",
+    "venue": "Project Hall",
+    "description": "Present project objectives, implementation and results."
+  },
+  {
+    "id": 14,
+    "title": "Environmental Awareness",
+    "category": "Awareness",
+    "date": "2027-01-08",
+    "venue": "College Campus",
+    "description": "Discuss sustainability and environmental responsibility."
+  },
+  {
+    "id": 15,
+    "title": "Programming Quiz",
+    "category": "Technical",
+    "date": "2027-01-12",
+    "venue": "Computer Laboratory",
+    "description": "Test programming concepts through an interactive quiz."
+  }
+]

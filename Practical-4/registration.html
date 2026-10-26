@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | Student Portal</title>
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive styles for registration page -->
+    <style>
+        .registration-form {
+            max-width: 900px;
+        }
+
+        .registration-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+        }
+
+        .registration-form .form-group {
+            margin: 0;
+            min-width: 0;
+        }
+
+        .registration-form .form-group > label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .registration-form input:not([type="radio"]),
+        .registration-form select,
+        .registration-form textarea {
+            width: 100%;
+            min-width: 0;
+        }
+
+        .registration-form .gender-group {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            padding: 12px;
+            min-width: 0;
+            margin: 0;
+        }
+
+        .registration-form .gender-group legend {
+            padding: 0 6px;
+            font-weight: bold;
+        }
+
+        .radio-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .registration-form .radio-options label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .registration-form .radio-options input[type="radio"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .registration-form .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .registration-form .form-actions button {
+            margin: 0;
+        }
+
+        .registration-form input:focus,
+        .registration-form select:focus,
+        .registration-form textarea:focus {
+            outline: 3px solid #90caf9;
+            outline-offset: 2px;
+        }
+
+        /* Tablet and desktop layout */
+        @media (min-width: 768px) {
+            .registration-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Small mobile screens */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 14px;
+            }
+
+            .registration-form .form-actions button {
+                flex: 1 1 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>STUDENT PORTAL</h1>
+    </header>
+
+    <hr>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html" aria-current="page">Registration</a>
+        <a href="courses.html">Courses</a>
+        <a href="scholarship.html">Scholarship</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="result.html">Result</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="fees.html">Fees</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <main class="container">
+
+        <h2>Student Registration Form</h2>
+
+        <p>Please enter your details in the form below.</p>
+
+        <form class="registration-form" action="#" method="get">
+
+            <div class="registration-grid">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollment">Enrollment Number</label>
+                    <input
+                        type="text"
+                        id="enrollment"
+                        name="enrollment"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        autocomplete="new-password"
+                    >
+                </div>
+
+                <fieldset class="form-group gender-group">
+                    <legend>Gender</legend>
+
+                    <div class="radio-options">
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                            >
+                            Male
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                            >
+                            Female
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="other"
+                            >
+                            Other
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input
+                        type="date"
+                        id="dob"
+                        name="dob"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department">
+                        <option value="computer">Computer Engineering</option>
+                        <option value="it">Information Technology</option>
+                        <option value="mechanical">Mechanical Engineering</option>
+                        <option value="civil">Civil Engineering</option>
+                        <option value="electrical">Electrical Engineering</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <select id="semester" name="semester">
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        autocomplete="tel"
+                    >
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="address">Address</label>
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div class="form-actions full-width">
+                    <button type="submit">Register</button>
+                    <button type="reset">Clear</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

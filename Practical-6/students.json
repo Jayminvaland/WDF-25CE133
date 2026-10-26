@@ -1,0 +1,123 @@
+
+[
+  {
+    "id": 1,
+    "name": "Amit Patel",
+    "enrollment": "CE1001",
+    "email": "amit.patel@example.com",
+    "course": "Computer Engineering",
+    "year": 3
+  },
+  {
+    "id": 2,
+    "name": "Anaya Shah",
+    "enrollment": "CE1002",
+    "email": "anaya.shah@example.com",
+    "course": "Computer Engineering",
+    "year": 2
+  },
+  {
+    "id": 3,
+    "name": "Ravi Desai",
+    "enrollment": "IT1003",
+    "email": "ravi.desai@example.com",
+    "course": "Information Technology",
+    "year": 3
+  },
+  {
+    "id": 4,
+    "name": "Priya Mehta",
+    "enrollment": "CE1004",
+    "email": "priya.mehta@example.com",
+    "course": "Computer Engineering",
+    "year": 1
+  },
+  {
+    "id": 5,
+    "name": "Karan Joshi",
+    "enrollment": "ME1005",
+    "email": "karan.joshi@example.com",
+    "course": "Mechanical Engineering",
+    "year": 2
+  },
+  {
+    "id": 6,
+    "name": "Neha Patel",
+    "enrollment": "IT1006",
+    "email": "neha.patel@example.com",
+    "course": "Information Technology",
+    "year": 4
+  },
+  {
+    "id": 7,
+    "name": "Rahul Trivedi",
+    "enrollment": "CE1007",
+    "email": "rahul.trivedi@example.com",
+    "course": "Computer Engineering",
+    "year": 3
+  },
+  {
+    "id": 8,
+    "name": "Diya Shah",
+    "enrollment": "CV1008",
+    "email": "diya.shah@example.com",
+    "course": "Civil Engineering",
+    "year": 1
+  },
+  {
+    "id": 9,
+    "name": "Harsh Patel",
+    "enrollment": "EE1009",
+    "email": "harsh.patel@example.com",
+    "course": "Electrical Engineering",
+    "year": 2
+  },
+  {
+    "id": 10,
+    "name": "Mira Desai",
+    "enrollment": "IT1010",
+    "email": "mira.desai@example.com",
+    "course": "Information Technology",
+    "year": 3
+  },
+  {
+    "id": 11,
+    "name": "Dev Shah",
+    "enrollment": "CE1011",
+    "email": "dev.shah@example.com",
+    "course": "Computer Engineering",
+    "year": 4
+  },
+  {
+    "id": 12,
+    "name": "Riya Joshi",
+    "enrollment": "ME1012",
+    "email": "riya.joshi@example.com",
+    "course": "Mechanical Engineering",
+    "year": 1
+  },
+  {
+    "id": 13,
+    "name": "Yash Mehta",
+    "enrollment": "CV1013",
+    "email": "yash.mehta@example.com",
+    "course": "Civil Engineering",
+    "year": 3
+  },
+  {
+    "id": 14,
+    "name": "Krupa Trivedi",
+    "enrollment": "EE1014",
+    "email": "krupa.trivedi@example.com",
+    "course": "Electrical Engineering",
+    "year": 2
+  },
+  {
+    "id": 15,
+    "name": "Meet Patel",
+    "enrollment": "CE1015",
+    "email": "meet.patel@example.com",
+    "course": "Computer Engineering",
+    "year": 1
+  }
+]

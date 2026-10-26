@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JSON Data Explorer | StudentHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Existing StudentHub navigation and theme functionality -->
+    <script src="script.js" defer></script>
+
+    <!-- Practical 6 JavaScript -->
+    <script src="practical6.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>STUDENT PORTAL</h1>
+
+        <button
+            type="button"
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-pressed="false">
+            ☀️ Light Mode
+        </button>
+    </header>
+
+    <hr>
+
+    <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        ☰ Menu
+    </button>
+
+    <nav id="main-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="registration.html">Registration</a>
+        <a href="courses.html">Courses</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="result.html">Result</a>
+        <a href="practical6.html" aria-current="page">JSON Data Explorer</a>
+    </nav>
+
+    <hr>
+
+    <main class="container">
+
+        <h2>StudentHub JSON Data Explorer</h2>
+
+        <p>
+            Fetch data from JSON files and explore records using
+            search, filtering, sorting and pagination.
+        </p>
+
+        <!-- Dataset selection -->
+        <section class="card">
+
+            <h3>Select Dataset</h3>
+
+            <div class="form-group">
+                <label for="data-type">Choose data type</label>
+
+                <select id="data-type">
+                    <option value="events">College Events</option>
+                    <option value="students">Students</option>
+                    <option value="faqs">Frequently Asked Questions</option>
+                </select>
+            </div>
+
+            <!-- Search -->
+            <div class="form-group">
+                <label for="search-input">Search Records</label>
+
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search by keyword..."
+                    autocomplete="off">
+            </div>
+
+            <!-- Filter -->
+            <div class="form-group">
+                <label for="filter-select">Filter by category/course</label>
+
+                <select id="filter-select">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+
+            <!-- Sorting -->
+            <div class="form-group">
+                <label for="sort-select">Sort Records</label>
+
+                <select id="sort-select">
+                    <option value="default">Default Order</option>
+                    <option value="primary-asc">Name / Title: A to Z</option>
+                    <option value="primary-desc">Name / Title: Z to A</option>
+                    <option value="secondary-asc">Date / Year: Ascending</option>
+                    <option value="secondary-desc">Date / Year: Descending</option>
+                </select>
+            </div>
+
+            <!-- Page size -->
+            <div class="form-group">
+                <label for="page-size">Records per page</label>
+
+                <select id="page-size">
+                    <option value="5">5 Records</option>
+                    <option value="10">10 Records</option>
+                    <option value="15">15 Records</option>
+                </select>
+            </div>
+
+        </section>
+
+        <!-- Loading and error messages -->
+        <section aria-label="Data loading status">
+
+            <p id="status-message" role="status" aria-live="polite">
+                Ready to load data.
+            </p>
+
+            <p
+                id="error-message"
+                role="alert"
+                hidden>
+            </p>
+
+        </section>
+
+        <!-- Result summary -->
+        <section aria-label="Search results">
+
+            <h3>Results</h3>
+
+            <p id="record-count" aria-live="polite">
+                No records loaded yet.
+            </p>
+
+            <!-- JavaScript will render records here -->
+            <div
+                id="data-container"
+                class="grid-container"
+                aria-live="polite">
+            </div>
+
+        </section>
+
+        <!-- Pagination -->
+        <nav class="pagination-controls" aria-label="Result pagination">
+
+            <button
+                type="button"
+                id="prev-page"
+                disabled>
+                ← Previous
+            </button>
+
+            <span id="page-info" aria-live="polite">
+                Page 0 of 0
+            </span>
+
+            <button
+                type="button"
+                id="next-page"
+                disabled>
+                Next →
+            </button>
+
+        </nav>
+
+    </main>
+
+</body>
+</html>

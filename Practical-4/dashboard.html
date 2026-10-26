@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .dashboard-welcome {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-welcome h2 {
+            margin-bottom: 5px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .dashboard-card {
+            min-width: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .dashboard-card p {
+            overflow-wrap: anywhere;
+        }
+
+        .dashboard-number {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .dashboard-card a {
+            color: #90caf9;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .dashboard-card a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        .dashboard-list {
+            padding-left: 22px;
+            line-height: 1.9;
+        }
+
+        .dashboard-list a {
+            color: #90caf9;
+        }
+
+        @media (min-width: 600px) {
+            .dashboard-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .dashboard-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dashboard-welcome h2 {
+                font-size: 22px;
+            }
+
+            .dashboard-number {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>STUDENT PORTAL</h1>
+    </header>
+
+    <hr>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Registration</a>
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+        <a href="events.html">Events</a>
+        <a href="courses.html">Courses</a>
+        <a href="scholarship.html">Scholarship</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="result.html">Result</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="fees.html">Fees</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <main class="container">
+
+        <section class="dashboard-welcome">
+            <div>
+                <h2>Student Dashboard</h2>
+                <p>Welcome to your student portal dashboard.</p>
+            </div>
+        </section>
+
+        <section class="dashboard-grid" aria-label="Student summary">
+
+            <article class="card dashboard-card">
+                <h3>My Courses</h3>
+                <p>Explore your available courses.</p>
+                <p class="dashboard-number">Courses</p>
+                <a href="courses.html">View Courses</a>
+            </article>
+
+            <article class="card dashboard-card">
+                <h3>Attendance</h3>
+                <p>Check your attendance information.</p>
+                <p class="dashboard-number">Attendance</p>
+                <a href="attendance.html">View Attendance</a>
+            </article>
+
+            <article class="card dashboard-card">
+                <h3>Examination Results</h3>
+                <p>Access your examination result page.</p>
+                <p class="dashboard-number">Results</p>
+                <a href="result.html">View Results</a>
+            </article>
+
+            <article class="card dashboard-card">
+                <h3>Fee Details</h3>
+                <p>Visit the page for fee information.</p>
+                <p class="dashboard-number">Fees</p>
+                <a href="fees.html">View Fees</a>
+            </article>
+
+        </section>
+
+        <section class="card" style="margin-top: 20px;">
+            <h3>Quick Links</h3>
+
+            <ul class="dashboard-list">
+                <li><a href="registration.html">Student Registration</a></li>
+                <li><a href="scholarship.html">Scholarship Information</a></li>
+                <li><a href="timetable.html">Class Timetable</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>

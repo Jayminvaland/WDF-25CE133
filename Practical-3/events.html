@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .events-intro {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .event-card {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .event-date {
+            display: inline-block;
+            color: #90caf9;
+            font-weight: bold;
+        }
+
+        .event-card p {
+            overflow-wrap: anywhere;
+        }
+
+        .event-card a {
+            display: inline-block;
+            width: fit-content;
+            padding: 9px 14px;
+            border-radius: 5px;
+            background-color: #0d6efd;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .event-card a:hover {
+            background-color: #084298;
+        }
+
+        .events-note {
+            margin-top: 24px;
+        }
+
+        @media (min-width: 600px) {
+            .events-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .events-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .event-card {
+                padding: 15px;
+            }
+
+            .event-card h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>STUDENT PORTAL</h1>
+    </header>
+
+    <hr>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Registration</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="events.html" aria-current="page">Events</a>
+        <a href="courses.html">Courses</a>
+        <a href="scholarship.html">Scholarship</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="result.html">Result</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="fees.html">Fees</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <main class="container">
+
+        <section class="events-intro">
+            <h2>College Events</h2>
+
+            <p>
+                Explore academic, technical and cultural events
+                organized for students.
+            </p>
+        </section>
+
+        <section class="events-grid" aria-label="Upcoming college events">
+
+            <article class="card event-card">
+                <span class="event-date">Academic Event</span>
+
+                <h3>Technical Seminar</h3>
+
+                <p>
+                    Attend a seminar to learn about new technologies,
+                    web development and computer engineering.
+                </p>
+
+                <p><strong>Venue:</strong> College Seminar Hall</p>
+
+                <a href="registration.html">Student Registration</a>
+            </article>
+
+            <article class="card event-card">
+                <span class="event-date">Technical Event</span>
+
+                <h3>Coding Competition</h3>
+
+                <p>
+                    Test your programming skills and solve
+                    interesting coding problems with fellow students.
+                </p>
+
+                <p><strong>Venue:</strong> Computer Laboratory</p>
+
+                <a href="registration.html">Student Registration</a>
+            </article>
+
+            <article class="card event-card">
+                <span class="event-date">Cultural Event</span>
+
+                <h3>College Cultural Festival</h3>
+
+                <p>
+                    Participate in cultural activities, music,
+                    performances and creative competitions.
+                </p>
+
+                <p><strong>Venue:</strong> College Auditorium</p>
+
+                <a href="registration.html">Student Registration</a>
+            </article>
+
+            <article class="card event-card">
+                <span class="event-date">Workshop</span>
+
+                <h3>Web Development Workshop</h3>
+
+                <p>
+                    Learn the fundamentals of HTML, CSS,
+                    JavaScript and responsive website design.
+                </p>
+
+                <p><strong>Venue:</strong> Computer Laboratory</p>
+
+                <a href="registration.html">Student Registration</a>
+            </article>
+
+            <article class="card event-card">
+                <span class="event-date">Student Activity</span>
+
+                <h3>Project Exhibition</h3>
+
+                <p>
+                    Present student projects, explain your ideas
+                    and explore innovative technical solutions.
+                </p>
+
+                <p><strong>Venue:</strong> College Exhibition Hall</p>
+
+                <a href="registration.html">Student Registration</a>
+            </article>
+
+            <article class="card event-card">
+                <span class="event-date">Career Event</span>
+
+                <h3>Career Guidance Session</h3>
+
+                <p>
+                    Understand career opportunities, technical skills
+                    and preparation for future job roles.
+                </p>
+
+                <p><strong>Venue:</strong> College Seminar Hall</p>
+
+                <a href="registration.html">Student Registration</a>
+            </article>
+
+        </section>
+
+        <section class="card events-note">
+            <h3>Important Information</h3>
+
+            <p>
+                Students should check the official college
+                announcements for confirmed event dates and timings.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>

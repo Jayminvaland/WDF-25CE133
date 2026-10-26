@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>STUDENT PORTAL</h1>
+     <button
+        type="button"
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-pressed="false">
+        ☀️ Light Mode
+    </button>
+</header>
+
+<hr>
+<button
+    type="button"
+    class="menu-toggle"
+    id="menu-toggle"
+    aria-expanded="false"
+    aria-controls="main-navigation">
+    ☰ Menu
+</button>
+
+<nav id="main-navigation" aria-label="Main navigation">
+    
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="registration.html">Registration</a>
+    <a href="courses.html">Courses</a>
+    <a href="scholarship.html">Scholarship</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="result.html">Result</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<hr>
+
+<main class="container">
+    
+<!-- Notification Banner -->
+<div
+    id="notification-banner"
+    class="notification-banner"
+    role="status"
+    aria-live="polite">
+
+    <p>
+        <strong>Announcement:</strong>
+        Welcome to StudentHub! Check the latest academic updates.
+    </p>
+
+    <button
+        type="button"
+        id="dismiss-notification"
+        aria-label="Dismiss notification">
+        ✕
+    </button>
+
+</div>
+
+<!-- Modal Popup Button -->
+<div class="modal-trigger-container">
+    <button type="button" id="open-modal">
+        📢 Open StudentHub Information
+    </button>
+</div>
+
+<!-- Modal Popup -->
+<div
+    id="modal-overlay"
+    class="modal-overlay"
+    hidden
+    aria-hidden="true">
+
+    <section
+        class="modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        tabindex="-1">
+
+        <button
+            type="button"
+            id="close-modal"
+            class="modal-close"
+            aria-label="Close popup">
+            ✕
+        </button>
+
+        <h2 id="modal-title">Welcome to StudentHub!</h2>
+
+        <p>
+            StudentHub helps students access academic information,
+            courses, attendance, results and other student services.
+        </p>
+
+        <p>
+            Explore the portal to find the information you need.
+        </p>
+
+        <button type="button" id="modal-done">
+            Got It
+        </button>
+
+    </section>
+
+</div>
+
+
+
+    <h2>Welcome to the Student Portal Website</h2>
+
+    <p>
+        Manage your scholarship, attendance, results, courses, fees and more.
+    </p>
+
+    <h2>Portal Services</h2>
+
+    <div class="grid-container">
+
+        <div class="card">
+            <h3>Courses</h3>
+            <p>View available courses and programmes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Attendance</h3>
+            <p>Check your attendance details.</p>
+        </div>
+
+        <div class="card">
+            <h3>Results</h3>
+            <p>View your semester examination results.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fees</h3>
+            <p>Check fee details and payment status.</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h3>About the Portal</h3>
+
+    <p>
+        This portal provides students with easy access to academic information
+        including attendance, examination results, course details,
+        scholarship information, fee details, and class timetable.
+    </p>
+
+    
+<!-- ---------- CONTENT SLIDER ---------- -->
+
+<section class="slider-section" aria-labelledby="slider-heading">
+
+    <h2 id="slider-heading">StudentHub Highlights</h2>
+
+    <div
+        id="content-slider"
+        class="content-slider"
+        aria-live="polite">
+
+        <article class="slide active">
+            <h3>Welcome to StudentHub</h3>
+            <p>
+                Your student portal for accessing academic information
+                and important student services.
+            </p>
+        </article>
+
+        <article class="slide" hidden>
+            <h3>Explore Your Courses</h3>
+            <p>
+                Explore your courses and find important information
+                about your academic programme.
+            </p>
+        </article>
+
+        <article class="slide" hidden>
+            <h3>Stay Updated</h3>
+            <p>
+                Check your attendance, results, timetable and
+                other important student information.
+            </p>
+        </article>
+
+    </div>
+
+    <div class="slider-controls">
+
+        <button type="button" id="slider-prev">
+            ← Previous
+        </button>
+
+        <span id="slider-indicator" aria-label="Current slide">
+            Slide 1 of 3
+        </span>
+
+        <button type="button" id="slider-next">
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ---------- COLLAPSIBLE FAQ ---------- -->
+
+<section class="faq-section" aria-labelledby="faq-heading">
+
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-1">
+                What is StudentHub?
+                <span aria-hidden="true">＋</span>
+            </button>
+        </h3>
+
+        <div id="faq-answer-1" class="faq-answer" hidden>
+            <p>
+                StudentHub is a student portal that provides access
+                to academic information and student services.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-2">
+                How can I view my courses?
+                <span aria-hidden="true">＋</span>
+            </button>
+        </h3>
+
+        <div id="faq-answer-2" class="faq-answer" hidden>
+            <p>
+                Open the Courses page from the navigation menu to
+                explore the available courses.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-3">
+                Where can I check my attendance?
+                <span aria-hidden="true">＋</span>
+            </button>
+        </h3>
+
+        <div id="faq-answer-3" class="faq-answer" hidden>
+            <p>
+                Select the Attendance link in the navigation menu
+                to open the attendance page.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-4">
+                How can I view my examination results?
+                <span aria-hidden="true">＋</span>
+            </button>
+        </h3>
+
+        <div id="faq-answer-4" class="faq-answer" hidden>
+            <p>
+                Open the Result page from the navigation menu
+                to view the available examination information.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+</main>
+
+</body>
+
+</html>

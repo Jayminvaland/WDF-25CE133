@@ -1,0 +1,758 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("background image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+hr {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid white;
+}
+
+/* ---------- FLEXBOX NAVIGATION ---------- */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    padding: 10px;
+}
+
+nav a {
+    color: #90caf9;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: yellow;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 15px 0 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* ---------- CSS GRID ---------- */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card h3 {
+    color: #90caf9;
+}
+
+/* ---------- TABLES ---------- */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+/* ---------- FORMS ---------- */
+
+form {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    margin: 5px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #0d6efd;
+    color: white;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #084298;
+}
+
+/* ---------- IMAGES ---------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 30px 20px 15px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav a {
+        width: auto;
+        padding: 8px 10px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---------- DESKTOP ---------- */
+
+@media (min-width: 1024px) {
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ---------- HAMBURGER MENU ---------- */
+
+.menu-toggle {
+    display: none;
+    margin: 10px auto;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Mobile navigation */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav#main-navigation {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav#main-navigation.is-open {
+        display: flex;
+    }
+}
+
+
+/* ---------- LIGHT / DARK THEME ---------- */
+
+/* Theme switch button */
+.theme-toggle {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background-color: #084298;
+}
+
+/* Light theme */
+body.light-theme {
+    background-color: #f3f6fb;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.78),
+            rgba(255, 255, 255, 0.78)
+        ),
+        url("background image.png");
+
+    color: #1f2937;
+}
+
+/* Headings and text */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme p {
+    color: #1f2937;
+}
+
+/* Main content container */
+body.light-theme .container {
+    background-color: rgba(255, 255, 255, 0.88);
+    color: #1f2937;
+}
+
+/* Navigation links */
+body.light-theme nav a {
+    color: #075985;
+}
+
+body.light-theme nav a:hover {
+    background-color: rgba(15, 23, 42, 0.08);
+    color: #0d47a1;
+}
+
+/* Horizontal lines */
+body.light-theme hr {
+    border-color: #475569;
+}
+
+/* Cards */
+body.light-theme .card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(15, 23, 42, 0.2);
+    color: #1f2937;
+}
+
+body.light-theme .card h3 {
+    color: #075985;
+}
+
+/* Theme button in light mode */
+body.light-theme .theme-toggle {
+    background-color: #1f2937;
+    color: white;
+}
+
+body.light-theme .theme-toggle:hover {
+    background-color: #374151;
+}
+
+
+/* ---------- NOTIFICATION BANNER ---------- */
+
+.notification-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 14px 16px;
+
+    background-color: #dbeafe;
+    color: #1e3a8a;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+}
+
+.notification-banner p {
+    margin: 0;
+    line-height: 1.5;
+    color: inherit;
+}
+
+.notification-banner button {
+    flex-shrink: 0;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.notification-banner button:hover {
+    background-color: #1e40af;
+}
+
+/* Light theme notification */
+body.light-theme .notification-banner {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+    border-left-color: #2563eb;
+}
+
+body.light-theme .notification-banner p {
+    color: #1e3a8a;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .notification-banner {
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .notification-banner p {
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* ---------- MODAL POPUP ---------- */
+
+.modal-trigger-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Dark overlay behind the popup */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
+/* Keep the popup hidden until JavaScript opens it */
+.modal-overlay[hidden] {
+    display: none !important;
+}
+
+/* Popup content */
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 35px 24px 24px;
+    border-radius: 12px;
+
+    background-color: #172033;
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content h2 {
+    margin-bottom: 18px;
+    padding-right: 10px;
+    color: white;
+}
+
+.modal-content p {
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: inherit;
+}
+
+/* Popup close button */
+.modal-content .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    margin: 0;
+    padding: 6px 10px;
+
+    background-color: #dc2626;
+    color: white;
+}
+
+.modal-content .modal-close:hover {
+    background-color: #991b1b;
+}
+
+/* Light theme popup */
+body.light-theme .modal-content {
+    background-color: #ffffff;
+    color: #1f2937;
+    border-color: #d1d5db;
+}
+
+body.light-theme .modal-content h2 {
+    color: #1f2937;
+}
+
+body.light-theme .modal-content p {
+    color: #374151;
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 35px 18px 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* ---------- CONTENT SLIDER ---------- */
+
+.slider-section {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.slider-section > h2 {
+    margin-bottom: 20px;
+}
+
+.content-slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Individual slides */
+.slide {
+    min-height: 160px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+}
+
+.slide h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #90caf9;
+    font-size: 22px;
+}
+
+.slide p {
+    line-height: 1.7;
+}
+
+/* Make sure hidden slides stay hidden */
+.slide[hidden] {
+    display: none !important;
+}
+
+/* Previous and Next controls */
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.slider-controls button {
+    margin: 0;
+    padding: 10px 16px;
+}
+
+#slider-indicator {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Light theme */
+body.light-theme .slider-section {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+body.light-theme .slide {
+    background-color: #ffffff;
+    border-color: #d1d5db;
+    color: #1f2937;
+}
+
+body.light-theme .slide h3 {
+    color: #075985;
+}
+
+body.light-theme .slide p {
+    color: #1f2937;
+}
+
+body.light-theme #slider-indicator {
+    color: #1f2937;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .slider-section {
+        padding: 12px;
+    }
+
+    .slide {
+        min-height: 180px;
+        padding: 16px;
+    }
+
+    .slide h3 {
+        font-size: 19px;
+    }
+
+    .slider-controls {
+        gap: 8px;
+    }
+
+    .slider-controls button {
+        padding: 9px 12px;
+    }
+}
+
+/* ---------- COLLAPSIBLE FAQ ---------- */
+
+.faq-section {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.faq-section > h2 {
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.faq-item h3 {
+    margin: 0;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: white;
+
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-question span {
+    flex-shrink: 0;
+    font-size: 22px;
+}
+
+.faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.faq-question:focus-visible {
+    outline: 3px solid #90caf9;
+    outline-offset: -3px;
+}
+
+.faq-answer {
+    padding: 0 16px 14px;
+    line-height: 1.7;
+    color: white;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* Keep closed answers hidden */
+.faq-answer[hidden] {
+    display: none !important;
+}
+
+/* Light theme */
+body.light-theme .faq-section {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+body.light-theme .faq-item {
+    background-color: white;
+    border-color: #d1d5db;
+}
+
+body.light-theme .faq-question {
+    color: #1f2937;
+}
+
+body.light-theme .faq-question:hover {
+    background-color: #eff6ff;
+}
+
+body.light-theme .faq-answer {
+    color: #374151;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 12px;
+    }
+
+    .faq-question {
+        padding: 13px;
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding: 0 13px 13px;
+    }
+}
